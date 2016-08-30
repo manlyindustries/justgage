@@ -1,203 +1,288 @@
+    configurable parameters
+    -------------------------
+       * all parameter values enclosed in 'single' quotes
+  
+     id : string                 this is container element id
+     value : float               value gauge is showing
+     defaults : bool             defaults parameter to use
+     parentNode : node object    this is container element
+
+     width : int                 gauge width
+     height : int                gauge height
+     gaugeWidthScale : float     width of the gauge element
+     gaugeColor : string         background color of gauge element
+
+     title : string              gauge title
+     titleFontColor : string     color of gauge title
+     titleFontFamily : string    font of gauge title
+     titlePosition : string      'above' or 'below'
+     valueFontColor : string     color of label showing current value
+     valueFontFamily : string    font of label showing current value
+     symbol : string             special symbol to show next to value
+     label : string              text to show below value
+     labelFontColor : string     color of label showing label under value
+
+     valueMinFontSize : int      absolute minimum font size for the value
+     titleMinFontSize            absolute minimum font size for the title
+     labelMinFontSize            absolute minimum font size for the label
+     minLabelMinFontSize         absolute minimum font size for the minimum label
+     maxLabelMinFontSize         absolute minimum font size for the maximum label
+
+     min : float                 min value
+     minTxt : string             min value text
+     max : float                 max value
+     maxTxt : string             max value text
+     reverse : bool              reverse min and max
+
+     formatNumber: boolean       formats numbers with commas where appropriate
+     humanFriendly : bool        convert large numbers for min, max, value to human friendly (e.g. 1234567 -> 1.23M)
+     humanFriendlyDecimal : int  number of decimal places for our human friendly number to contain
+     decimals : int              number of digits after floating point
+     counter : bool              animate level number change
+     customSectors : []          number of digits after floating point
+
+     shadowOpacity : int              0 ~ 1
+     shadowSize: int                  inner shadow size
+     shadowVerticalOffset : int       how much shadow is offset from top
+     levelColors : string[]           colors of indicator, from lower to upper, in RGB format
+     startAnimationTime : int         length of initial animation
+     startAnimationType : string      type of initial animation (linear, >, <,  <>, bounce)
+     refreshAnimationTime : int       length of refresh animation
+     refreshAnimationType : string    type of refresh animation (linear, >, <,  <>, bounce)
+     textRenderer: func               function applied before rendering text
+     onAnimationEnd: func             function applied after animation is done
+
+     hideValue : bool            hide value text
+     hideMinMax : bool           hide min and max values
+     hideInnerShadow : bool      hide inner shadow
+     noGradient : bool           whether to use gradual color change for value, or sector-based
+     donut : bool                show full donut gauge
+     donutStartAngle : int       angle to start from when in donut mode
+
+     relativeGaugeSize : bool    whether gauge size should follow changes in container element size
+     
+     pointer : bool              show value pointer
+     pointerOptions : object     define pointer look
+      {   toplength:     
+          bottomlength:    
+          bottomwidth:
+          color:
+          stroke:
+          stroke_width:
+          stroke_linecap:
+          fill:    }
+
+  ------------------------------------------------
   configurable parameters
   
-    // id : string
-    // this is container element id
+     id : string
+     this is container element id
        id: config.id,
 
-    // value : float
-    // value gauge is showing
+     value : float
+     value gauge is showing
        default: 'float'
 
-    // defaults : bool
-    // defaults parameter to use
+     defaults : bool
+     defaults parameter to use
        default false/off
 
-    // parentNode : node object
-    // this is container element
+     parentNode : node object
+     this is container element
 
-    // width : int
-    // gauge width
+     width : int
+     gauge width
 
-    // height : int
-    // gauge height
+     height : int
+     gauge height
 
-    // title : string
-    // gauge title
+     title : string
+     gauge title
 
-    // titleFontColor : string
-    // color of gauge title
-       default: "#999999"
+     titleFontColor : string
+     color of gauge title
+       default: '#999999'
 
-    // titleFontFamily : string
-    // font of gauge title
-       default:  "sans-serif"
+     titleFontFamily : string
+     font of gauge title
+       default:  'sans-serif'
 
-    // titlePosition : string
-    // 'above' or 'below'
-       default: "above"
+     titlePosition : string
+     'above' or 'below'
+       default: 'above'
 
-    // valueFontColor : string
-    // color of label showing current value
-       default: "#010101"
+     valueFontColor : string
+     color of label showing current value
+       default: '#010101'
 
-    // valueFontFamily : string
-    // font of label showing current value
-       default: "Arial"
+     valueFontFamily : string
+     font of label showing current value
+       default: 'Arial'
 
-    // symbol : string
-    // special symbol to show next to value
+     symbol : string
+     special symbol to show next to value
        default: ''
 
-    // min : float
-    // min value
+     min : float
+     min value
        default: 'float'
 
-    // minTxt : string
-    // min value text
+     minTxt : string
+     min value text
        default false/off
 
-    // max : float
-    // max value
+     max : float
+     max value
        default: 'float'
 
-    // maxTxt : string
-    // max value text
+     maxTxt : string
+     max value text
        default false/off
 
-    // reverse : bool
-    // reverse min and max
+     reverse : bool
+     reverse min and max
        default false/off
 
-    // humanFriendlyDecimal : int
-    // number of decimal places for our human friendly number to contain
+     humanFriendlyDecimal : int
+     number of decimal places for our human friendly number to contain
 
-    // textRenderer: func
-    // function applied before rendering text
+     textRenderer: func
+     function applied before rendering text
 
-    // onAnimationEnd: func
-    // function applied after animation is done
+     onAnimationEnd: func
+     function applied after animation is done
 
-    // gaugeWidthScale : float
-    // width of the gauge element
+     gaugeWidthScale : float
+     width of the gauge element
        default: 1.0
 
-    // gaugeColor : string
-    // background color of gauge element
-       default: "#edebeb"
+     gaugeColor : string
+     background color of gauge element
+       default: '#edebeb'
 
-    // label : string
-    // text to show below value
+     label : string
+     text to show below value
        default:  ''  
 
-    // labelFontColor : string
-    // color of label showing label under value
-       default: "#b3b3b3"
+     labelFontColor : string
+     color of label showing label under value
+       default: '#b3b3b3'
 
-    // shadowOpacity : int
-    // 0 ~ 1
+     shadowOpacity : int
+     0 ~ 1
        default:  0.2
 
-    // shadowSize: int
-    // inner shadow size
+     shadowSize: int
+     inner shadow size
        default: 5
 
-    // shadowVerticalOffset : int
-    // how much shadow is offset from top
+     shadowVerticalOffset : int
+     how much shadow is offset from top
        default: 3
 
-    // levelColors : string[]
-    // colors of indicator, from lower to upper, in RGB format
+     levelColors : string[]
+     colors of indicator, from lower to upper, in RGB format
        default: ["#a9d70b", "#f9c802", "#ff0000"]  'array'
 
-    // startAnimationTime : int
-    // length of initial animation
+     startAnimationTime : int
+     length of initial animation
        default: 700
 
-    // startAnimationType : string
-    // type of initial animation (linear, >, <,  <>, bounce)
+     startAnimationType : string
+     type of initial animation (linear, >, <,  <>, bounce)
        default: '>'
 
-    // refreshAnimationTime : int
-    // length of refresh animation
+     refreshAnimationTime : int
+     length of refresh animation
        default: 700
 
-    // refreshAnimationType : string
-    // type of refresh animation (linear, >, <,  <>, bounce)
+     refreshAnimationType : string
+     type of refresh animation (linear, >, <,  <>, bounce)
        default: '>'
 
-    // donutStartAngle : int
-    // angle to start from when in donut mode
+     donutStartAngle : int
+     angle to start from when in donut mode
        default:  90
 
-    // valueMinFontSize : int
-    // absolute minimum font size for the value
+     valueMinFontSize : int
+     absolute minimum font size for the value
        default: 16
        
-    // titleMinFontSize
-    // absolute minimum font size for the title
+     titleMinFontSize
+     absolute minimum font size for the title
        default: 10
     
-    // labelMinFontSize
-    // absolute minimum font size for the label
+     labelMinFontSize
+     absolute minimum font size for the label
        default: 10
   
-    // minLabelMinFontSize
-    // absolute minimum font size for the minimum label
+     minLabelMinFontSize
+     absolute minimum font size for the minimum label
        default: 10
   
-    // maxLabelMinFontSize
-    // absolute minimum font size for the maximum label
+     maxLabelMinFontSize
+     absolute minimum font size for the maximum label
        default: 10
   
-    // hideValue : bool
-    // hide value text
-       default false/off
+     hideValue : bool
+     hide value text
+       default false
 
-    // hideMinMax : bool
-    // hide min and max values
-       default false/off
+     hideMinMax : bool
+     hide min and max values
+       default false
 
-    // hideInnerShadow : bool
-    // hide inner shadow
-       default false/off
+     hideInnerShadow : bool
+     hide inner shadow
+       default false
 
-    // humanFriendly : bool
-    // convert large numbers for min, max, value to human friendly (e.g. 1234567 -> 1.23M)
-       default false/off
+     humanFriendly : bool
+     convert large numbers for min, max, value to human friendly (e.g. 1234567 -> 1.23M)
+       default false
 
-    // noGradient : bool
-    // whether to use gradual color change for value, or sector-based
-       default false/off
+     noGradient : bool
+     whether to use gradual color change for value, or sector-based
+       default false
 
-    // donut : bool
-    // show full donut gauge
-       default false/off
+     donut : bool
+     show full donut gauge
+       default false
 
-    // relativeGaugeSize : bool
-    // whether gauge size should follow changes in container element size
-       default false/off
+     relativeGaugeSize : bool
+     whether gauge size should follow changes in container element size
+       default false
 
-    // counter : bool
-    // animate level number change
-       default false/off
+     counter : bool
+     animate level number change
+       default false
 
-    // decimals : int
-    // number of digits after floating point
+     decimals : int
+     number of digits after floating point
        default: 0
 
-    // customSectors : [] of objects
-    // number of digits after floating point
+     customSectors : [] of objects
+     number of digits after floating point
        default:  []
 
-    // formatNumber: boolean
-    // formats numbers with commas where appropriate
-       default false/off
+     formatNumber: boolean
+     formats numbers with commas where appropriate
+       default false
 
-    // pointer : bool
-    // show value pointer
-       default false/off
+     pointer : bool
+     show value pointer
+       default false
 
-    // pointerOptions : object
-    // define pointer look
+     pointerOptions : object
+     define pointer look
        default:  []
+
+          toplength: nn,      -offset from top
+          bottomlength: nn,   -offset from bottom
+          bottomwidth: nn,    -pointer bottom width
+          color: '#nnnnnn',   -pointer color (inner)
+          stroke: '#nnnnnn',  -border color around pointer (outer)
+          stroke_width: 3,    -border width
+          stroke_linecap: 'round' 'square'  
+          fill:  '#nnnnnn',   - dunno 
+
   
