@@ -1,0 +1,34 @@
+ * **refresh(val, max, config)** - now you can include config object when calling refresh function to update any existing justGage parameter   
+ * **onAnimationEnd** - callback function after gauge animation ends
+ * **minTxt & maxTxt** - Show custom min and max text - https://github.com/toorshia/justgage/issues/193
+ * **titlePosition** - 'above' or 'below'
+ * **titleFontFamily** - customize font-family for the title
+ * **valueFontFamily** - customize font-family for the value
+ * **donut pointer** - render configurable triangle pointer in donut mode - demo at http://justgage.com/examples/pointer.html
+ * **reverse** - reverse the gauge direction - demo at http://justgage.com/examples/reverse.html
+ * **pointer** - render triangular value pointer - demo at http://justgage.com/examples/pointer.html
+ * **defaults** - option to define common config object when you're creating multiple gauges - demo at http://justgage.com/examples/defaults.html
+ * use HTML5 'data' attributes of the DOM Element to render the gauge. (Note: data attributes override the constructor options, if present.)
+
+ * **parentNode** - use instead of id, attaches gauge to node which is outside of DOM tree - demo at http://justgage.com/examples/custom-node.html
+ * **width** - force gauge width
+ * **height** - force gauge height
+
+ * **customSectors** - define one or many value ranges with custom gauge color - demo at http://justgage.com/examples/custom-sectors.html
+
+ * **counter** - option to animate value in counting fashion - check demo at http://justgage.com/examples/counter.html
+
+ * **refresh()** - added optional 'max' parameter to use when you need to update max value - demo at http://justgage.com/examples/refresh-maximum.html
+ * **decimals** - option to define/limit number of decimals when not using humanFriendly or customRenderer to display value
+
+ * Min and Max labels are now auto-off when in donut mode
+ * Start angle in donut mode is now 90
+ * donutStartAngle - option to define start angle for donut
+ * Option to define custom rendering function for displayed value
+ * Donut display mode added
+ * Option to hide value label
+ * Option to enable responsive gauge size
+ * Option to accept min and max defined as string values
+ * Option to configure value symbol
+ * Option to configure minimum font size for all texts
+ * Option to show shorthand big numbers (human friendly)
