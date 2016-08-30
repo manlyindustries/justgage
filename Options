@@ -1,0 +1,203 @@
+  configurable parameters
+  
+    // id : string
+    // this is container element id
+       id: config.id,
+
+    // value : float
+    // value gauge is showing
+       default: 'float'
+
+    // defaults : bool
+    // defaults parameter to use
+       default false/off
+
+    // parentNode : node object
+    // this is container element
+
+    // width : int
+    // gauge width
+
+    // height : int
+    // gauge height
+
+    // title : string
+    // gauge title
+
+    // titleFontColor : string
+    // color of gauge title
+       default: "#999999"
+
+    // titleFontFamily : string
+    // font of gauge title
+       default:  "sans-serif"
+
+    // titlePosition : string
+    // 'above' or 'below'
+       default: "above"
+
+    // valueFontColor : string
+    // color of label showing current value
+       default: "#010101"
+
+    // valueFontFamily : string
+    // font of label showing current value
+       default: "Arial"
+
+    // symbol : string
+    // special symbol to show next to value
+       default: ''
+
+    // min : float
+    // min value
+       default: 'float'
+
+    // minTxt : string
+    // min value text
+       default false/off
+
+    // max : float
+    // max value
+       default: 'float'
+
+    // maxTxt : string
+    // max value text
+       default false/off
+
+    // reverse : bool
+    // reverse min and max
+       default false/off
+
+    // humanFriendlyDecimal : int
+    // number of decimal places for our human friendly number to contain
+
+    // textRenderer: func
+    // function applied before rendering text
+
+    // onAnimationEnd: func
+    // function applied after animation is done
+
+    // gaugeWidthScale : float
+    // width of the gauge element
+       default: 1.0
+
+    // gaugeColor : string
+    // background color of gauge element
+       default: "#edebeb"
+
+    // label : string
+    // text to show below value
+       default:  ''  
+
+    // labelFontColor : string
+    // color of label showing label under value
+       default: "#b3b3b3"
+
+    // shadowOpacity : int
+    // 0 ~ 1
+       default:  0.2
+
+    // shadowSize: int
+    // inner shadow size
+       default: 5
+
+    // shadowVerticalOffset : int
+    // how much shadow is offset from top
+       default: 3
+
+    // levelColors : string[]
+    // colors of indicator, from lower to upper, in RGB format
+       default: ["#a9d70b", "#f9c802", "#ff0000"]  'array'
+
+    // startAnimationTime : int
+    // length of initial animation
+       default: 700
+
+    // startAnimationType : string
+    // type of initial animation (linear, >, <,  <>, bounce)
+       default: '>'
+
+    // refreshAnimationTime : int
+    // length of refresh animation
+       default: 700
+
+    // refreshAnimationType : string
+    // type of refresh animation (linear, >, <,  <>, bounce)
+       default: '>'
+
+    // donutStartAngle : int
+    // angle to start from when in donut mode
+       default:  90
+
+    // valueMinFontSize : int
+    // absolute minimum font size for the value
+       default: 16
+       
+    // titleMinFontSize
+    // absolute minimum font size for the title
+       default: 10
+    
+    // labelMinFontSize
+    // absolute minimum font size for the label
+       default: 10
+  
+    // minLabelMinFontSize
+    // absolute minimum font size for the minimum label
+       default: 10
+  
+    // maxLabelMinFontSize
+    // absolute minimum font size for the maximum label
+       default: 10
+  
+    // hideValue : bool
+    // hide value text
+       default false/off
+
+    // hideMinMax : bool
+    // hide min and max values
+       default false/off
+
+    // hideInnerShadow : bool
+    // hide inner shadow
+       default false/off
+
+    // humanFriendly : bool
+    // convert large numbers for min, max, value to human friendly (e.g. 1234567 -> 1.23M)
+       default false/off
+
+    // noGradient : bool
+    // whether to use gradual color change for value, or sector-based
+       default false/off
+
+    // donut : bool
+    // show full donut gauge
+       default false/off
+
+    // relativeGaugeSize : bool
+    // whether gauge size should follow changes in container element size
+       default false/off
+
+    // counter : bool
+    // animate level number change
+       default false/off
+
+    // decimals : int
+    // number of digits after floating point
+       default: 0
+
+    // customSectors : [] of objects
+    // number of digits after floating point
+       default:  []
+
+    // formatNumber: boolean
+    // formats numbers with commas where appropriate
+       default false/off
+
+    // pointer : bool
+    // show value pointer
+       default false/off
+
+    // pointerOptions : object
+    // define pointer look
+       default:  []
+  
